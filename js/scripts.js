@@ -44,4 +44,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
 	};
 
 	updateYears();
+
+	setTimeout(() => {
+		document.getElementById("closeAlert").click();
+	}, 4000);
 });
