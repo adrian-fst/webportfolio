@@ -27,4 +27,21 @@ window.addEventListener("DOMContentLoaded", (event) => {
 	worksCarousel.addEventListener("slide.bs.carousel", (event) => {
 		event.to == 1 ? video1.play() : video1.pause();
 	});
+
+	const tooltipTriggerList = [].slice.call(
+		document.querySelectorAll('[data-bs-toggle="tooltip"]')
+	);
+	const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+		return new bootstrap.Tooltip(tooltipTriggerEl);
+	});
+
+	const updateYears = () => {
+		const fieldHolder = document.getElementById("dynamicYear");
+		let startedIn = 2007;
+		const dateToday = new Date();
+
+		fieldHolder.innerText = `${dateToday.getFullYear() - startedIn}`;
+	};
+
+	updateYears();
 });

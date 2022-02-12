@@ -58,13 +58,16 @@
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav">
 					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#main">Profile</a>
+					</li>
+					<li class="nav-item">
 						<a class="nav-link js-scroll-trigger" href="#about">About</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link js-scroll-trigger" href="#experience">Skills</a>
+						<a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
+						<a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link js-scroll-trigger" href="#works1">Projects</a>
@@ -78,24 +81,19 @@
 		<!-- Page Content-->
 		<div class="container-fluid p-0 bg-broken-white">
 			<!-- About-->
-			<section class="resume-section" id="about">
+			<section class="resume-section" id="main">
 				<div class="resume-section-content">
 					<h1 class="mb-0 heading-name">Adrian Enciso</h1>
 
-					<div class="subheading mb-2">
-						BSIT Major in Multimedia Arts. Informatics
-						College Manila
+					<div class="subheading mb-2 gradient-animate">
+						BSIT Major in Multimedia Arts. Informatics College Manila
 					</div>
-					<p class="fw-lighter text-secondary">Junior Software Developer</p>
+					<span class="badge rounded-pill bl-gr"> Junior Software Developer </span>
 					<hr class="rounded bar yl-or gradient-animate" />
 					<p class="lead mb-5">
-						Hello! I am Adrian Enciso, I am an Information Technology Major in
-						Multimedia Arts student, and here is my simple web portfolio that I am
-						keen on improving over the duration of my career, this is made using a
-						Bootstrap framework theme that I modified to utilize the responsive
-						layout, I do not take credit for the general responsive layout of this
-						page, but I added my own personal CSS experiments to differentiate it
-						among others.
+						Currently working as a junior software developer for a company that
+						specializes on enterprise solutions/applications.
+						<br />
 					</p>
 					<div class="social-icons">
 						<a
@@ -118,6 +116,12 @@
 						></a>
 						<a
 							class="social-icon soft-neu-circle-out"
+							href="https://www.linkedin.com/in/adrian-enciso-804a5421b/"
+							target="_blank"
+							><i class="fab fa-linkedin heading-black"></i
+						></a>
+						<a
+							class="social-icon soft-neu-circle-out"
 							href="mailto:aadrian11eenciso@gmail.com"
 							><i class="fas fa-envelope heading-black"></i
 						></a>
@@ -125,10 +129,41 @@
 				</div>
 			</section>
 			<hr class="m-0" />
+			<section class="resume-section-full" id="about">
+				<div class="resume-section-content w-100">
+					<h2 class="mb-0 heading-name full-offset">About Me</h2>
+					<p class="lead mb-5 full-offset"></p>
+					<div class="parallax row align-items-center">
+						<div class="prx-content col">
+							<p class="prx-text px-5">
+								Hello! I am Adrian Enciso, this is my personal web porfolio that I
+								maintain during my free time. I am a full-time software developer, but
+								this is my medium of expressing my creative and front-end development
+								skills.
+								<br />
+								<br />
+								I took an IT-centric senior high school track, which led my education
+								towards IT-related knowledge, I was primarily exposed to programming and
+								software development, but then during my sophomore year while I am
+								progressing on my Bachelor's degree in Information Technology, I almost
+								shifted my preferred career towards multimedia arts, content creation,
+								and creative work. Today, I work as a junior software developer for a
+								local company that primarily offers enterprise solutions/applications.
+								<br />
+								<br />
+								I am still currently learning, but my passion towards programming,
+								software development, and problem-solving has never been this great,
+								ever.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<hr class="m-0" />
 			<!-- Experience-->
-			<section class="resume-section" id="experience">
+			<section class="resume-section" id="skills">
 				<div class="resume-section-content">
-					<h2 class="mb-4 heading-title">My Key Skills</h2>
+					<h2 class="mb-4 heading-title">Skills</h2>
 					<hr class="bar rounded gr-cy gradient-animate" />
 
 					<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
@@ -136,13 +171,40 @@
 							<h3 class="mb-0 heading-sub-title">Computer Troubleshooting.</h3>
 							<div class="subheading mb-3">(Hardware & Software)</div>
 							<p>
-								Ever since we got our first personal computer almost 16 years ago, I
+								I always had the enthusiasm towards anything computer related, it
+								started
+								<span
+									id="dynamicYear"
+									class="fw-bold"
+									data-bs-toggle="tooltip"
+									data-bs-placement="top"
+									title="This changes every year dynamically!"
+								></span>
+								years ago, when we got our first ever personal computer, I was always
+								fascinated on how computers operated, and every time we encountered
+								issues with it, we always called my mother's colleague who was into
+								computers back then. I would say that those memories further cemented my
+								passion towards my wanted career now.
+								<!-- Ever since we got our first personal computer almost 16 years ago, I
 								have developed my enthusiasm towards anything that relates to computers,
 								whenever our personal computer had issues, I remember being amazed to
 								the guy that always fixed our computer, I would say that those memories
 								further cemented my passion towards my wanted career now, I also
 								remembered being thrilled to our computer literacy subject when I was in
-								elementary.
+								elementary. -->
+							</p>
+						</div>
+					</div>
+
+					<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+						<div class="flex-grow-1">
+							<h3 class="mb-0 heading-sub-title">Hardware Repairs.</h3>
+							<div class="subheading mb-3">(Gadget repairs)</div>
+							<p>
+								I support the <i>right to repair movement.</i> I like the ability of
+								having to prolong the life of my electronics, from time-to-time, I
+								repair repairable gadgets, electronics, and etc. I also prefer to be
+								involved on doing things I am interested in.
 							</p>
 						</div>
 					</div>
@@ -154,7 +216,12 @@
 								Graphic Design, Video Editing, Content Creation, & Photography
 							</div>
 							<p>
-								I would say that aside my interest towards computer troubleshooting, I
+								Even though that I am a full-time programmer, I still from time-to-time
+								love to create multimedia related contents, I still appreciate other
+								creations as well, and I think it really helps to be creative sometimes,
+								since programming tends to only stimulate one's analytical skills, I
+								still appreciate dealing with multimedia creation.
+								<!-- I would say that aside my interest towards computer troubleshooting, I
 								personally also enjoy multimedia and anything that has to do with it,
 								whether it be creation, consumption, or appreciation, when it comes to
 								graphic design, I started learning it back when I was in 8th Grade, I
@@ -164,18 +231,18 @@
 								into the current state of my graphic design interest, I would not say
 								that I’m professional at it, but I am confident enough that I can do a
 								great creation when needed. I also enjoy video editing, videography, and
-								photography, when given the chance and equipment to do so.
+								photography, when given the chance and equipment to do so. -->
 							</p>
 						</div>
 					</div>
 					<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
 						<div class="flex-grow-1">
 							<h3 class="mb-0 heading-sub-title">Software Development.</h3>
-							<div class="subheading mb-3">
-								(Mainly Web Development, somewhat full-stack, & is still learning)
-							</div>
+							<div class="subheading mb-3">(Full-stack development)</div>
 							<p>
-								Even though my course major is related to multimedia arts, a great
+								I am still continually learning, past programming experience led me to
+								know that the learning never stops at school.
+								<!-- Even though my course major is related to multimedia arts, a great
 								portion of our curriculum contained software development, when I started
 								senior high school, I took an Information Communication Technology (ICT)
 								track, during the duration of my senior high school I was taught the
@@ -220,14 +287,148 @@
 								full stack programmer(again), is a complete web-based clinic appointment
 								handling and clinic management for a small-scale clinic (JS, PHP), it is
 								still undergoing tests, but is both approved by our thesis adviser,
-								course facilitator, and the clinic owner.
+								course facilitator, and the clinic owner. -->
 							</p>
+							<!-- sets -->
+							<ul class="list-inline dev-icons">
+								<li
+									class="list-inline-item"
+									data-bs-toggle="tooltip"
+									data-bs-placement="bottom"
+									title="Windows application/server development (C#)"
+								>
+									<i class="fab fa-windows"></i>
+								</li>
+
+								<li
+									class="list-inline-item"
+									class="list-inline-item"
+									data-bs-toggle="tooltip"
+									data-bs-placement="bottom"
+									title="HTML5"
+								>
+									<i class="fab fa-html5"></i>
+								</li>
+								<li
+									class="list-inline-item"
+									class="list-inline-item"
+									data-bs-toggle="tooltip"
+									data-bs-placement="bottom"
+									title="CSS"
+								>
+									<i class="fab fa-css3-alt"></i>
+								</li>
+								<li
+									class="list-inline-item"
+									class="list-inline-item"
+									data-bs-toggle="tooltip"
+									data-bs-placement="bottom"
+									title="Javascript"
+								>
+									<i class="fab fa-js-square"></i>
+								</li>
+								<li
+									class="list-inline-item"
+									class="list-inline-item"
+									data-bs-toggle="tooltip"
+									data-bs-placement="bottom"
+									title="PHP"
+								>
+									<i class="fab fa-php"></i>
+								</li>
+								<li
+									class="list-inline-item"
+									class="list-inline-item"
+									data-bs-toggle="tooltip"
+									data-bs-placement="bottom"
+									title="SQL - RDBMS"
+								>
+									<i class="fas fa-database"></i>
+								</li>
+
+								<!-- <li class="list-inline-item"><i class="fab fa-angular"></i></li>
+								<li class="list-inline-item"><i class="fab fa-react"></i></li>
+								<li class="list-inline-item"><i class="fab fa-node-js"></i></li> -->
+							</ul>
 						</div>
 					</div>
 				</div>
 			</section>
 			<hr class="m-0" />
 			<!-- Interests-->
+			<section class="resume-section" id="experience">
+				<div class="resume-section-content">
+					<h2 class="mb-4 heading-title">Experience</h2>
+					<hr class="bar rounded fs-pr gradient-animate" />
+
+					<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+						<div class="flex-grow-1">
+							<h3 class="mb-2">Junior Software Developer</h3>
+							<div class="subheading mb-1">[Under Probation]</div>
+							<p>
+								My current job as a junior software developer, I primarily focus on
+								enterprise solutions/applications.
+							</p>
+						</div>
+						<div class="flex-shrink-0">
+							<span class="text-mn-gray">January 2022 - Present</span>
+						</div>
+					</div>
+
+					<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+						<div class="flex-grow-1">
+							<h3 class="mb-2">Software Engineer Intern</h3>
+							<div class="subheading mb-1">Teligent Systems, Inc.</div>
+							<p>
+								I took my first internship to comply with our college curriculum with
+								this company. this was also my first experience with the actual software
+								development industry.
+							</p>
+						</div>
+						<div class="flex-shrink-0">
+							<span class="text-mn-gray">October 2021 - December 2021</span>
+						</div>
+					</div>
+
+					<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+						<div class="flex-grow-1">
+							<h3 class="mb-2">Registration Staff/Support</h3>
+							<div class="subheading mb-1">
+								TBEX 2019 - Travel Business Exchange - Clark, Mariott Hotel
+							</div>
+							<p>
+								I was part of the registration/support team during this event. I took
+								part with the management of the entry, support, system processing, ID
+								distribution of the delegated guests.
+							</p>
+						</div>
+						<div class="flex-shrink-0">
+							<span class="text-mn-gray">November 2019</span>
+						</div>
+					</div>
+
+					<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+						<div class="flex-grow-1">
+							<h3 class="mb-2">Organization Vice President</h3>
+							<div class="subheading mb-1">
+								UNITS - Unified Information Technology Students Organization
+							</div>
+							<p>
+								I was the organization vice president for the UNITS Organization from
+								our school (Informatics College Caloocan), our organization primarily
+								handled majority of the technicalities behind school events, hosted our
+								own, and handled the concerns of our fellow information technology
+								students.
+							</p>
+						</div>
+						<div class="flex-shrink-0">
+							<span class="text-mn-gray">2019-2020</span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- BACKUP
+			
 			<section class="resume-section" id="interests">
 				<div class="resume-section-content">
 					<h2 class="mb-4 heading-title">My Interests</h2>
@@ -251,11 +452,13 @@
 					</p>
 				</div>
 			</section>
+		-->
 			<hr class="m-0" />
 			<!-- Creations-->
 			<section class="resume-section py-0" id="works1">
 				<div class="resume-section-content">
 					<h2 class="mb-2 heading-title">Projects</h2>
+					<div class="subheading">(Multimedia)</div>
 					<hr class="bar rounded lb-id gradient-animate" />
 					<div class="d-flex flex-column flex-md-row justify-content-between mb-0">
 						<ul class="nav nav-neu mb-3" id="pills-tab" role="tablist">
