@@ -43,9 +43,55 @@ window.addEventListener("DOMContentLoaded", (event) => {
 		fieldHolder.innerText = `${dateToday.getFullYear() - startedIn}`;
 	};
 
-	updateYears();
+	const initAlertFunction = () => {
+		const alertList = document.querySelectorAll(".alert");
+		alertList.forEach(function (alert) {
+			new bootstrap.Alert(alert);
+		});
 
-	setTimeout(() => {
-		document.getElementById("closeAlert").click();
-	}, 4000);
+		// console.log(uAgentHandler());
+		const agentObject = uAgentHandler();
+		let alertStr = ``;
+		alertStr =
+			!agentObject.operatingSystem && !agentObject.userAgent
+				? "Welcome to my web portfolio, desktop viewing is recommended."
+				: `You are currently browsing using <strong>${
+						agentObject.userAgent ?? "Mobile"
+				  }</strong> on <strong>${
+						agentObject.operatingSystem ?? "Mobile OS"
+				  }</strong>, this page is best viewed via a desktop browser. 
+				`;
+
+		document.getElementById("alertContent").innerHTML = alertStr;
+		let initAlert = document.getElementById("alert-initial");
+		let bsAlert = new bootstrap.Alert(initAlert);
+		setTimeout(() => {
+			bsAlert.close();
+		}, 4000);
+	};
+
+	const uAgentHandler = () => {
+		try {
+			const uA = new MobileDetect(window.navigator.userAgent);
+			return {
+				userAgent: uA.userAgent() ?? null,
+				operatingSystem: uA.os() ?? null,
+			};
+		} catch (ex) {
+			console.error(ex);
+			return null;
+		}
+	};
+
+	const mainLoad = () => {
+		try {
+			initAlertFunction();
+			updateYears();
+		} catch (ex) {
+			console.error(ex);
+		}
+	};
+
+	/* MAIN FUNCTION LOAD */
+	mainLoad();
 });
