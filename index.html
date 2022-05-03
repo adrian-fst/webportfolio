@@ -8,6 +8,7 @@
 		/>
 		<meta name="description" content="" />
 		<meta name="author" content="" />
+		<noscript><meta http-equiv="refresh" content="0; url=redir.html" /></noscript>
 		<title>adrn</title>
 		<link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
 		<!-- Font Awesome icons (free version)-->
@@ -30,6 +31,27 @@
 		<link href="css/styles.css" rel="stylesheet" />
 	</head>
 	<body id="page-top">
+		<!-- Loader -->
+		<div id="loader">
+			<div id="spinner">
+				<div class="lds-spinner">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Loader -->
 		<div class="toplayer bg-red w-100">
 			<div
 				id="alert-initial"
@@ -99,7 +121,9 @@
 			<!-- About-->
 			<section class="resume-section" id="main">
 				<div class="resume-section-content">
-					<h1 class="mb-0 heading-name">Adrian Enciso</h1>
+					<h1 id="myName" class="mb-0 heading-name">
+						<span id="text-container"></span><span id="caret"></span>
+					</h1>
 
 					<div class="subheading mb-2 gradient-animate">
 						BSIT Major in Multimedia Arts. Informatics College Manila
