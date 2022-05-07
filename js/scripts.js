@@ -118,22 +118,31 @@ window.addEventListener("DOMContentLoaded", (event) => {
 		});
 	};
 
-	async function callAsyncFuncs() {
+	const callAsyncFuncs = async () => {
 		await loaderHandler();
 		await initAlertFunction();
 		await typeMyName("Adrian Enciso");
-	}
+	};
 
 	const disableContextMenu = (isOff) => {
 		if (isOff) {
 			document.addEventListener("contextmenu", (event) => event.preventDefault());
 		}
 	};
+
+	const forcedExceptionKuno = () => {
+		const hrefLink = document.getElementById("forceExec");
+		hrefLink.addEventListener("click", (e) => {
+			document.cookie = "not_null";
+		});
+	};
+
 	const mainLoad = () => {
 		try {
 			callAsyncFuncs();
 			updateYears();
 			disableContextMenu(true);
+			forcedExceptionKuno();
 		} catch (ex) {
 			console.error(ex);
 		}
