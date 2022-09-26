@@ -12464,6 +12464,19 @@ section.resume-section .resume-section-content {
 	transition: visibility 0s 0.3s, opacity 0.3s linear;
   }
 
+  /* Page Blur */
+
+  .blur {
+	-webkit-filter: blur(6px);
+	pointer-events: none;
+	content: "Work in progress... ";
+  }
+
+  .blur-lite {
+	-webkit-filter: blur(1.5px);
+	
+  }
+
   
 
 /* Animation */
@@ -12528,5 +12541,50 @@ section.resume-section .resume-section-content {
   
 	40%, 60% {
 	  transform: translate3d(4px, 0, 0);
+	}
+  }
+
+  .cog-loading {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #434C56;
+  }
+  
+  .cog-loading-animation {
+	display: flex;
+  }
+  
+  .cog-loading .glyphicon {
+	animation-name: loading-spin;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+  }
+  
+  .cog-loading-big {
+	font-size: 108px;
+	margin-bottom: 15px;
+	animation-duration: 3s;
+  }
+  
+  .cog-loading-small {
+	font-size: 60px;
+	align-self: flex-end;
+	margin-left: -10px;
+	animation-duration: 2s;
+	animation-direction: reverse;
+  }
+  
+  .cog-loading-text {
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  @keyframes loading-spin {
+	from {
+	  transform: rotate(0deg);
+	}
+	to {
+	  transform: rotate(360deg);
 	}
   }

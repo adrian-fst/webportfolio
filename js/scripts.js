@@ -43,7 +43,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 		fieldHolder.innerText = `${dateToday.getFullYear() - startedIn}`;
 	};
 
-	const initAlertFunction = () => {
+	const initAlertFunction = (isDebug) => {
 		try {
 			return new Promise((resolve, reject) => {
 				const alertList = document.querySelectorAll(".alert");
@@ -54,22 +54,28 @@ window.addEventListener("DOMContentLoaded", (event) => {
 				// console.log(uAgentHandler());
 				const agentObject = uAgentHandler();
 				let alertStr = ``;
-				alertStr =
-					!agentObject.operatingSystem && !agentObject.userAgent
-						? "Welcome to my web portfolio, desktop viewing is recommended."
-						: `You are currently browsing using <strong>${
-								agentObject.userAgent ?? "Mobile"
-						  }</strong> on <strong>${
-								agentObject.operatingSystem ?? "Mobile OS"
-						  }</strong>, this page is best viewed via a desktop browser. 
-				`;
+				if (!isDebug) {
+					alertStr =
+						!agentObject.operatingSystem && !agentObject.userAgent
+							? "Welcome to my web portfolio, desktop viewing is recommended."
+							: `You are currently browsing using <strong>${
+									agentObject.userAgent ?? "Mobile"
+							  }</strong> on <strong>${
+									agentObject.operatingSystem ?? "Mobile OS"
+							  }</strong>, this page is best viewed via a desktop browser. 
+					`;
+				} else {
+					alertStr = "Page is set to Work in Progress mode, hence the blur :))";
+				}
 
 				document.getElementById("alertContent").innerHTML = alertStr;
 				let initAlert = document.getElementById("alert-initial");
 				let bsAlert = new bootstrap.Alert(initAlert);
-				setTimeout(() => {
-					bsAlert.close();
-				}, 4000);
+				if (!isDebug) {
+					setTimeout(() => {
+						bsAlert.close();
+					}, 4000);
+				}
 				resolve();
 			});
 		} catch (ex) {
@@ -120,7 +126,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 	const callAsyncFuncs = async () => {
 		await loaderHandler();
-		await initAlertFunction();
+		await initAlertFunction(true);
 		await typeMyName("Adrian Enciso");
 	};
 
@@ -137,12 +143,29 @@ window.addEventListener("DOMContentLoaded", (event) => {
 		});
 	};
 
+	const addCogs = () => {
+		const elements = document.querySelectorAll("section.blur");
+		//console.log(elements.length);
+		const container = document.createElement("div");
+
+		container.setAttribute("class", "wip-loader");
+
+		container.innerText =
+			'<div class="cog-loading"><div class="cog-loading-animation"><span class="glyphicon glyphicon-cog cog-loading-big"></span><span class="glyphicon glyphicon-cog cog-loading-small"></span></div><p class="cog-loading-text">Work in Progress..</p></div>';
+		console.log(container);
+		elements.forEach((element, i) => {
+			console.log("test");
+			element.append(container);
+		});
+	};
+
 	const mainLoad = () => {
 		try {
 			callAsyncFuncs();
 			updateYears();
 			disableContextMenu(true);
 			forcedExceptionKuno();
+			//addCogs();
 		} catch (ex) {
 			console.error(ex);
 		}
